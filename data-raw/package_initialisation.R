@@ -1,5 +1,3 @@
-
-
 usethis::create_package(".")
 
 usethis::use_description(

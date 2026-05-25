@@ -1,6 +1,6 @@
 Package: fscontextdemo
 Title: Minimal Demonstration Package for fscontext Workflows
-Version: 0.0.1
+Version: 0.0.11
 Language: en-GB
 Authors@R: 
     person(given = "Daniel", family = "Antal", 
@@ -17,3 +17,6 @@ BugReports: https://github.com/dataobservatory-eu/fscontextdemo/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 8.0.0
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
