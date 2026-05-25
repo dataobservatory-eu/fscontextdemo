@@ -32,7 +32,7 @@ hello_world <- function(language_code = "en") {
   }
 
   if (language_code == "hu") {
-    hello_world_string <- "Helló világ!"
+    hello_world_string <- "Hell\u00f3 vil\u00e1g!"
   }
 
   if (hello_world_string == "") {

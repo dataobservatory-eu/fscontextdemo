@@ -15,5 +15,6 @@ usethis::use_description(
 
 usethis::use_gpl3_license()
 
-
 usethis::use_readme_rmd()
+
+usethis::use_codemeta()

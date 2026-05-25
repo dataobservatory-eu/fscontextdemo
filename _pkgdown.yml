@@ -5,12 +5,44 @@ template:
 
 home:
   title: fscontextdemo
+  description: >
+    A minimal provenance-aware demonstration package for
+    fscontext and dataset workflows.
+
+navbar:
+  structure:
+    left:
+      - intro
+      - reference
+      - articles
+      - news
+    right:
+      - github
 
 reference:
+
   - title: Example functions
+    desc: >
+      Small multilingual example functions used to demonstrate
+      package structure, testing workflows, and provenance-aware
+      reconstruction.
     contents:
       - hello_world
+      - label_country_data
 
   - title: Example datasets
+    desc: >
+      Small synthetic datasets and observational snapshots used
+      for provenance-aware filesystem reconstruction examples.
     contents:
       - fsdemo_country_data
+      - fscontextdemo_snapshot_01
+      - fscontextdemo_snapshot_02
+
+articles:
+  - title: Vignettes
+    contents:
+      - demo
+
+development:
+  mode: auto

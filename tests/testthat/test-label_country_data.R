@@ -41,7 +41,7 @@ test_that(
   "label_country_data errors without country column",
   {
 
-    test_df <- tibble::tibble(
+    test_df <- data.frame(
       value = 1:3
     )
 
