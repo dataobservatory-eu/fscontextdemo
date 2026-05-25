@@ -5,6 +5,7 @@
 
 <!-- badges: start -->
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20382570.svg)](https://doi.org/10.5281/zenodo.20382570)
 <!-- badges: end -->
 
 `fscontextdemo` is a minimal demonstration package used to test,

@@ -196,10 +196,10 @@ dev.off()
 
 The generated PNG plot can be included directly in the vignette.
 
-```{r}
+```{r renderpng}
 knitr::include_graphics(
   here::here(
-    "inst", "extdata", "plots", "country_barplot.png"
+    "man", "figures", "country_barplot.png"
   )
 )
 ```
@@ -225,7 +225,7 @@ The snapshot itself becomes a provenance artefact that can later support:
 - repository archaeology
 - contextual event projection
 
-```{r,eval = TRUE}
+```{r,eval = FALSE}
 snapshot_path <-
   fscontext::snapshot_storage(
     root = here::here(),
@@ -316,7 +316,7 @@ It also retains the provenance:
 ```{r provenance}
 fsdemo_prelabelled_country_data$country
 ```
-```{r rds}
+```{r rds, eval=FALSE}
 saveRDS(
   fsdemo_prelabelled_country_data,
   here::here(
