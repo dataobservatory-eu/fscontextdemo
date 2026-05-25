@@ -24,9 +24,15 @@ test_that(
     expect_equal(
       attr(
         labelled_df$country,
-        "labels"
+        "prelabel"
       ),
-      country_map
+      c(
+        "Andorra" = "AD",
+        "Liechtenstein" = "LI",
+        "San Marino" = "SM",
+        "LI" = "LI",
+        "SM" = "SM"
+      )
     )
   }
 )

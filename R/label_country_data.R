@@ -24,6 +24,7 @@
 #'   prelabel_map = country_map
 #' )
 #'
+#' @importFrom dataset prelabel
 #' @export
 label_country_data <- function(
     df,
