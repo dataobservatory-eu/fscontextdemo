@@ -1,4 +1,16 @@
-url: ~
+url: https://dataobservatory-eu.github.io/fscontextdemo/
+
 template:
   bootstrap: 5
 
+home:
+  title: fscontextdemo
+
+reference:
+  - title: Example functions
+    contents:
+      - hello_world
+
+  - title: Example datasets
+    contents:
+      - fsdemo_country_data

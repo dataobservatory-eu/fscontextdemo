@@ -12,7 +12,7 @@ Description: A small self-contained R package used to demonstrate, test,
     and document provenance-aware filesystem reconstruction workflows with
     fscontext.
 License: GPL (>= 3)
-URL: https://github.com/dataobservatory-eu/fscontextdemo
+URL: https://dataobservatory-eu.github.io/fscontextdemo
 BugReports: https://github.com/dataobservatory-eu/fscontextdemo/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
