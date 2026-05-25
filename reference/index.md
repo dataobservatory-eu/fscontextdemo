@@ -1,7 +1,11 @@
 # Package index
 
-## All functions
+## Example functions
 
-- [`fsdemo_country_data`](fsdemo_country_data.md) : Example country
-  dataset
-- [`hello_world()`](hello_world.md) : Return a friendly greeting
+- [`hello_world()`](https://dataobservatory-eu.github.io/fscontextdemo/reference/hello_world.md)
+  : Return a friendly greeting
+
+## Example datasets
+
+- [`fsdemo_country_data`](https://dataobservatory-eu.github.io/fscontextdemo/reference/fsdemo_country_data.md)
+  : Example country dataset
