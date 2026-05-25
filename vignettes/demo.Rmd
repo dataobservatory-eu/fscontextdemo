@@ -1,0 +1,159 @@
+---
+title: "demo"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{demo}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(fscontextdemo)
+library(dataset)
+library(fscontext)
+library(here)
+```
+
+```{r writecsv}
+data("fsdemo_country_data")
+if (!dir.exists(here::here(
+  "inst", "extdata"
+))) {
+  dir.create(
+    here::here("inst", "extdata"),
+    recursive = TRUE
+  )
+}
+
+write.csv(
+  fsdemo_country_data,
+  here::here(
+    "inst", "extdata", "fsdemo_country_data.csv"
+  ),
+  row.names = FALSE
+)
+```
+
+
+```{r pngbarplot}
+if (!dir.exists(here::here(
+  "inst", "extdata", "plots"
+))) {
+  dir.create(
+    here::here(
+      "inst", "extdata", "plots"
+    ),
+    recursive = TRUE,
+    showWarnings = FALSE
+  )
+}
+
+plot_country_values <- function() {
+  country_colors <- c(
+    "AD" = "#FAE000",
+    "LI" = "#00348A",
+    "SM" = "#4EC0E4"
+  )
+
+  bar_colors <- country_colors[
+    fsdemo_country_data$code
+  ]
+
+  bar_labels <- paste0(
+    fsdemo_country_data$code,
+    "\n",
+    fsdemo_country_data$time
+  )
+
+  barplot(
+    height = fsdemo_country_data$value,
+    names.arg = bar_labels,
+    col = bar_colors,
+    main = "Demo country values by year",
+    xlab = "Country and year",
+    ylab = "Value",
+    border = "grey30"
+  )
+
+  legend(
+    "topright",
+    legend = names(country_colors),
+    fill = country_colors,
+    title = "Country"
+  )
+}
+
+
+bar_colors <- country_colors[
+  fsdemo_country_data$code
+]
+
+bar_labels <- paste0(
+  fsdemo_country_data$code,
+  "\n",
+  fsdemo_country_data$time
+)
+
+plot_path_png <- here::here(
+  "inst", "extdata", "plots", "country_barplot.png"
+)
+
+plot_path_jpg <- here::here(
+  "inst", "extdata", "plots", "country_barplot.jpg"
+)
+
+plot_path_svg <- here::here(
+    "inst", "extdata", "plots", "country_barplot.svg"
+)
+  
+# PNG ----------------------------------------------------------
+
+png(
+  filename = plot_path_png,
+  width = 900,
+  height = 700
+)
+
+plot_country_values()
+
+dev.off()
+
+# JPEG ---------------------------------------------------------
+
+jpeg(
+  filename = plot_path_jpg,
+  width = 900,
+  height = 700,
+  quality = 95
+)
+
+plot_country_values()
+
+dev.off()
+
+# SVG ---------------------------------------------------------  
+svg(
+  filename = plot_path_svg,
+  width = 9,  height = 7
+)
+  
+plot_country_values()
+
+dev.off()
+```
+
+```{r}
+knitr::include_graphics(
+  here::here(
+    "inst", "extdata", "plots", "country_barplot.png"
+  )
+)
+```
+
